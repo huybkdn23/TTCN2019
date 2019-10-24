@@ -33,31 +33,7 @@
 
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-
-	<!-- <div class="site-wrap">
-
-    <div class="site-mobile-menu site-navbar-target">
-      <div class="site-mobile-menu-header">
-        <div class="site-mobile-menu-close mt-3">
-          <span class="icon-close2 js-menu-toggle"></span>
-        </div>
-      </div>
-      <div class="site-mobile-menu-body"></div>
-    </div>
-
-
-    
-          <div class="col-6 d-block d-lg-none text-right">
-              <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
-                class="icon-menu h3"></span></a>
-          </div>
-        </div>
-      </div> -->
-
-
-
-
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300" onload="onLoadIndex()">
 	<div class="site-navbar py-2 js-sticky-header site-navbar-target d-none pl-0 d-lg-block" role="banner">
 
 		<div class="container">
@@ -122,17 +98,16 @@
 						<h3 class="heading-92913 text-black text-center">Our Destinations</h3>
 					</div>
 				</div>
-				<div class="row">
-					<div class="col-md-6 col-lg-4 mb-4">
+				<div class="row" id="news-feed">
+					<!-- <div class="col-md-6 col-lg-4 mb-4">
 						<div class="service-39381">
 							<img src="images/hero_1.jpg" alt="Image" class="img-fluid">
 							<div class="p-4">
-								<h3>
-									<a onclick="navigateToDetail(1)"
-										<span class="icon-room mr-1 text-primary"></span> Croatia &mdash; Columbia</a>
+								<h3 onclick="navigateToDetail(1)">
+										Croatia &mdash; Columbia
 								</h3>
 							</div>
-						</div>
+						</div> 
 					</div>
 					<div class="col-md-6 col-lg-4 mb-4">
 						<div class="service-39381">
@@ -191,7 +166,7 @@
 						</div>
 					</div>
 
-				</div>
+				</div> -->
 			</div>
 		</div>
 
