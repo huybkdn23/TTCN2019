@@ -7,7 +7,7 @@ class ImageModel {
     link: string;
     name:string;
     constructor (init?: Partial<ImageModel>) {
-        Object.assign(this, init);
+        (<any>Object).assign(this, init);
     }
 }
 const imgs: ImageModel[] = [];
@@ -37,16 +37,18 @@ function onLoadIndex() {
     for(const img of imgs){
         var newsFeed = document.getElementById("news-feed");
         var div1 = document.createElement('div');
+        div1.setAttribute('onClick', 'navigateToDetail(' + img.id + ')');
         div1.setAttribute('class', 'col-md-6 col-lg-4 mb-4');
         var div = document.createElement("div");
         div.setAttribute('class', 'service-39381');
         var image = document.createElement('img');
         image.setAttribute('src', img.link);
         image.setAttribute('class', 'img-fluid');
+        image.setAttribute('class', 'image');
         var div2 = document.createElement('div');
         div2.setAttribute('class', 'p-4');
         var h3 = document.createElement('h3');
-        h3.setAttribute('onClick', 'navigateToDetail(' + img.id + ')');
+       
         h3.innerHTML = img.name;
         div2.appendChild(h3);
         div.appendChild(image);
