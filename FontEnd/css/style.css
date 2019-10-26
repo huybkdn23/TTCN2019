@@ -595,7 +595,7 @@ h1, h2, h3, h4, h5,
   background-size: cover;
   position: relative; }
   .intro-section, .intro-section .container .row {
-    height: 100vh;
+    height: 70vh;
     min-height: 700px; }
   .intro-section.innerpage, .intro-section.innerpage .container .row {
     height: 75vh;
