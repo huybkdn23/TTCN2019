@@ -9,26 +9,32 @@ var ImageModel = /** @class */ (function () {
     return ImageModel;
 }());
 var imgs = [];
-imgs.push(new ImageModel({
-    id: 1,
-    link: 'https://dulichmocchau.org/nview/at_==TYPENAME==_68b2bd8fb16bc17167b62e013ab3a3d9.jpg',
-    name: "Croatia"
-}));
-imgs.push(new ImageModel({
-    id: 2,
-    link: 'https://mangthuvien.net/Uploads/Post/tonyteo-150118030113-hoc-tu-vung-tieng-anh-du-lich-travel.jpg',
-    name: "Croatia"
-}));
-imgs.push(new ImageModel({
-    id: 3,
-    link: 'https://previews.123rf.com/images/tanjakrstevska/tanjakrstevska1107/tanjakrstevska110700018/10089486-travel-%C3%A2%E2%82%AC%E2%80%9C-collection-of-the-world-monuments.jpg',
-    name: "Croatia"
-}));
-imgs.push(new ImageModel({
-    id: 4,
-    link: 'https://dulichmocchau.org/nview/at_==TYPENAME==_68b2bd8fb16bc17167b62e013ab3a3d9.jpg',
-    name: "Croatia"
-}));
+fetch('https://localhost:44381/api/values')
+    .then(function (response) { return response.json(); })
+    .then(function (data) {
+    imgs = data; // Prints result from `response.json()` in getRequest
+    console.log(imgs);
+});
+// imgs.push(new ImageModel({
+//     id: 1,
+//     link: 'https://dulichmocchau.org/nview/at_==TYPENAME==_68b2bd8fb16bc17167b62e013ab3a3d9.jpg',
+//     name: "Croatia"
+// }));
+// imgs.push(new ImageModel({
+//     id: 2,
+//     link: 'https://mangthuvien.net/Uploads/Post/tonyteo-150118030113-hoc-tu-vung-tieng-anh-du-lich-travel.jpg',
+//     name: "Croatia"
+// }));
+// imgs.push(new ImageModel({
+//     id: 3,
+//     link: 'https://previews.123rf.com/images/tanjakrstevska/tanjakrstevska1107/tanjakrstevska110700018/10089486-travel-%C3%A2%E2%82%AC%E2%80%9C-collection-of-the-world-monuments.jpg',
+//     name: "Croatia"
+// }));
+// imgs.push(new ImageModel({
+//     id: 4,
+//     link: 'https://dulichmocchau.org/nview/at_==TYPENAME==_68b2bd8fb16bc17167b62e013ab3a3d9.jpg',
+//     name: "Croatia"
+// }));
 function onLoadIndex() {
     for (var _i = 0, imgs_1 = imgs; _i < imgs_1.length; _i++) {
         var img = imgs_1[_i];
