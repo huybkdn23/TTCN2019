@@ -7,7 +7,7 @@ import api from './api'
 const app = express(apiRoot, api)
 const server = http.createServer(app)
 
-mongoose.connect('mongodb+srv://huybkdn23:hhuuyy123@cluster1-gujje.gcp.mongodb.net/test?retryWrites=true&w=majority');
+mongoose.connect(mongo.uri)
 mongoose.Promise = Promise
 
 setImmediate(() => {

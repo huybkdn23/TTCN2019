@@ -25,7 +25,7 @@ const config = {
     root: path.join(__dirname, '..'),
     port: process.env.PORT || 9000,
     ip: process.env.IP || '0.0.0.0',
-    apiRoot: process.env.API_ROOT || '/api',
+    apiRoot: process.env.API_ROOT || '',
     masterKey: requireProcessEnv('MASTER_KEY'),
     jwtSecret: requireProcessEnv('JWT_SECRET'),
     mongo: {
@@ -39,7 +39,7 @@ const config = {
   test: { },
   development: {
     mongo: {
-      uri: 'mongodb://localhost/source-dev',
+      uri: 'mongodb+srv://huybkdn23:hhuuyy123@cluster1-gujje.gcp.mongodb.net/test?retryWrites=true&w=majority',
       options: {
         debug: true
       }
@@ -49,7 +49,7 @@ const config = {
     ip: process.env.IP || undefined,
     port: process.env.PORT || 8080,
     mongo: {
-      uri: process.env.MONGODB_URI || 'mongodb://localhost/source'
+      uri: process.env.MONGODB_URI || 'mongodb://localhost/blogs-backend'
     }
   }
 }
